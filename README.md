@@ -5,5 +5,5 @@ Tema de proyecto: Portfolio de ilustración y dibujo
 
 Recursos incorporados:
 - HTML
-- CSS (grid y flexbox)
+- CSS
 - Bootstrap
