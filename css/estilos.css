@@ -2,4 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Baumans';
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 25vh 60vh 15vh;
+    grid-template-areas: 
+        "nombre nombre nav nav"
+        ". . . ."
+        ". botones botones .";
+}
+
+header div{
+    grid-area: nombre;
+    padding: 1vw;
+}
+
+header nav {
+    grid-area: nav;
+    justify-content: center;
+    padding: 2vw;
+    justify-self: center;
+    display: flex;
+    gap: 8vw;
+}
+
+header nav a{
+    font-size: 130%;
+}
+
+header section{
+    grid-area: botones;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    gap: 4vw;
+}
+
+header section button {
+    text-wrap: nowrap;
+    font-size: 180%;
+    border-style: none;
+    padding: 3%;
+    cursor: pointer;
+    border-radius: 8%;
 }
