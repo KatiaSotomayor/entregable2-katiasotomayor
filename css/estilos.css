@@ -20,7 +20,7 @@ body{
         "nombre nombre nav nav"
         ". titulo titulo ."
         ". botones botones .";
-    background-image: url(/img/fondo_inicio.webp);
+    background-image: url(../img/fondo_inicio.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 120%;
@@ -34,7 +34,7 @@ body{
         "nombre nombre nav nav"
         ". titulo titulo ."
         ". . . .";
-    background-image: url(/img/fondo_otros.webp);
+    background-image: url(../img/fondo_otros.webp);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
@@ -200,6 +200,12 @@ header section button {
 }
 
 
+.contacto {
+    margin: 5% 5%;
+    font-size: 200%;
+}
+
+
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -208,6 +214,7 @@ footer{
     backdrop-filter: blur(6px);
     align-items: center;
     gap: 3vw;
+    
 }
 
 footer #linkedin {
@@ -260,6 +267,7 @@ footer section a{
     text-decoration: none;
     font-size: 110%;
     cursor: pointer;
+    color: white;
 }
 
 
