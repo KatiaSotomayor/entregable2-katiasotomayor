@@ -6,6 +6,7 @@
     color: white;
 }
 
+
 body{
     background-color: rgb(0, 47, 78);
 }
@@ -67,6 +68,7 @@ header nav {
 header nav a{
     text-decoration: none;
     cursor: pointer;
+    color: white;
 }
 
 header section{
@@ -77,11 +79,16 @@ header section{
     gap: 4vw;
 }
 
-#otros section, #inicio .titulo {
+#otros .titulo, #inicio .titulo {
     grid-area: titulo;
     justify-self: center;
     padding-top: 15%;
     align-self: start;
+    font-size: 200%;
+}
+
+#titulo-excepcion-bootstrap {
+    font-family: 'Baumans';
     font-size: 200%;
 }
 
@@ -174,7 +181,23 @@ header section button {
     background-color: rgba(240, 248, 255, 0);
 }
 
+.carousel-inner{
+    height: 55vh;
+}
 
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: rgb(0, 47, 78);
+}
 
 
 footer{
