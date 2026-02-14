@@ -9,6 +9,7 @@
 
 body{
     background-color: rgb(0, 47, 78);
+    overflow-x: hidden;
 }
 
 
@@ -59,10 +60,16 @@ header div{
 header nav {
     grid-area: nav;
     justify-content: center;
-    padding: 2vw 10.6vw;
+    padding: 0;
     justify-self: center;
     display: flex;
-    gap: 8vw;
+    gap: 3vw;
+    padding-top: 3%;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
     
 }
 
@@ -70,6 +77,7 @@ header nav a{
     text-decoration: none;
     cursor: pointer;
     color: white;
+    white-space: nowrap;
 }
 
 header section{
@@ -217,6 +225,11 @@ header section button:hover {
 .contacto {
     margin: 5% 5%;
     font-size: 200%;
+}
+
+
+.accordion-body, .card-text {
+    color: rgb(0, 47, 78);
 }
 
 
