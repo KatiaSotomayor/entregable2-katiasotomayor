@@ -1,0 +1,358 @@
+/*470 lineas sin sass*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baumans";
+  color: white;
+}
+* body {
+  background-color: rgb(0, 47, 78);
+  width: 100%;
+}
+* body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+* body {
+  /*PAGINA INICIO Y OTROS (SERVICIOS, CONTACTO, ETC*/
+}
+* body #inicio,
+* body #otros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto minmax(45vh, 1fr) auto;
+  grid-template-areas: "nombre nombre nav nav" ". titulo titulo ." ". botones botones .";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  background-size: cover;
+  width: 100%;
+}
+* body #inicio .titulo,
+* body #otros .titulo {
+  grid-area: titulo;
+  justify-self: center;
+  padding-top: clamp(2rem, 10vh, 6rem);
+  align-self: start;
+  font-size: 200%;
+  text-align: center;
+}
+* body #otros {
+  background-image: url(../img/fondo_otros.webp);
+}
+* body #inicio {
+  background-image: url(../img/fondo_inicio.webp);
+}
+* body header div, * body header nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  font-size: 120%;
+}
+* body header div {
+  grid-area: nombre;
+}
+* body header nav {
+  grid-area: nav;
+  justify-content: center;
+  padding: 0;
+  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  row-gap: 0.6rem;
+  padding-top: 3%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+* body header nav a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  white-space: nowrap;
+}
+* body header section {
+  grid-area: botones;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  gap: 4vw;
+}
+* body header section button {
+  text-wrap: nowrap;
+  font-size: clamp(1rem, 2.2vw, 1.8rem);
+  border-style: none;
+  padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 1.8rem);
+  cursor: pointer;
+  border-radius: 8%;
+  background-color: rgb(0, 47, 78);
+  transition: all 0.5s ease;
+}
+* body header section button:hover {
+  background-color: rgb(0, 47, 78);
+}
+* body #titulo-excepcion-bootstrap {
+  font-family: "Baumans";
+  font-size: 200%;
+}
+* body {
+  /*--------------------------------------*/
+  /*MAIN DE INICIO*/
+}
+* body .main-inicio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "sobre-mi sobre-mi sobre-mi estudios" "herramientas herramientas habilidades habilidades";
+  gap: 4vw;
+  padding: clamp(1rem, 4vw, 4rem);
+  background-color: white;
+  color: black;
+}
+* body .main-inicio section {
+  background-color: rgba(0, 47, 78, 0.08);
+  border-radius: 1vw;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+* body .main-inicio section h2 {
+  font-size: 200%;
+  color: rgb(0, 47, 78);
+}
+* body .main-inicio section p, * body .main-inicio section li {
+  font-size: 120%;
+  color: rgb(0, 47, 78);
+}
+* body .main-inicio section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+* body .main-inicio section button {
+  align-self: center;
+  margin-top: 2vw;
+  font-size: 130%;
+  padding: 0.8vw 2vw;
+  border-radius: 0.8vw;
+  border: none;
+  background-color: rgb(0, 47, 78);
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+* body .sobre-mi {
+  grid-area: sobre-mi;
+}
+* body .estudios {
+  grid-area: estudios;
+}
+* body .herramientas {
+  grid-area: herramientas;
+}
+* body .habilidades {
+  grid-area: habilidades;
+}
+* body .main-inicio section button:hover,
+* body footer button:hover {
+  transform: scale(1.1);
+}
+* body .sobre-mi {
+  background-color: rgba(240, 248, 255, 0);
+}
+* body {
+  /*CARRUSEL*/
+}
+* body .carousel-inner {
+  height: min(55vh, 560px);
+}
+* body .carousel-item {
+  height: 100%;
+}
+* body .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+* body .carousel-control-prev-icon,
+* body .carousel-control-next-icon {
+  color: rgb(0, 47, 78);
+}
+* body .contacto {
+  margin: clamp(1.5rem, 4vw, 3rem) auto;
+  width: min(92%, 900px);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+}
+* body .accordion-body,
+* body .card-text {
+  color: rgb(0, 47, 78);
+}
+* body {
+  /*---------------------------------------*/
+}
+* body .container {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+* body {
+  /*---------------------------------------*/
+}
+* body footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4vw;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  gap: 3vw;
+}
+* body footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  justify-content: center;
+}
+* body footer section a {
+  text-decoration: none;
+  font-size: 110%;
+  cursor: pointer;
+  color: white;
+}
+* body footer section #linkedin {
+  background-image: url(../img/linkedin.webp);
+  background-size: 95%;
+  transition: all 0.5s ease;
+}
+* body footer section #fiverr {
+  background-image: url(../img/fiverr.webp);
+  background-size: 100%;
+  transition: all 0.5s ease;
+}
+* body footer section #pinterest {
+  background-image: url(../img/pinterest.webp);
+  background-size: 100%;
+  transition: all 0.5s ease;
+}
+* body footer section:nth-child(1) {
+  align-items: flex-start;
+  font-size: 110%;
+}
+* body footer section:nth-child(2) {
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vw;
+}
+* body footer section:nth-child(2) button {
+  width: clamp(2.2rem, 3vw, 3rem);
+  height: clamp(2.2rem, 3vw, 3rem);
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+* body footer section:nth-child(3) {
+  align-items: flex-end;
+}
+
+/*--------------------------------------*/
+/*VISTA PARA TABLET*/
+@media (max-width: 1024px) {
+  #inicio,
+  #otros {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto auto minmax(35vh, auto) auto;
+    grid-template-areas: "nombre nombre nombre nombre" "nav nav nav nav" ". titulo titulo ." ". botones botones .";
+  }
+  header div {
+    text-align: center;
+  }
+  header div, header nav {
+    position: static;
+  }
+  header nav {
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    gap: 1rem;
+    padding: 0.8rem 1rem 0;
+  }
+  header section button {
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+  }
+  .main-inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "sobre-mi" "estudios" "herramientas" "habilidades";
+    text-align: center;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  footer section {
+    align-items: center !important;
+  }
+  footer section:nth-child(2) {
+    justify-content: center;
+  }
+}
+/*--------------------------------------*/
+/*VISTA PARA CELULAR*/
+@media (max-width: 600px) {
+  #inicio,
+  #otros {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nombre nombre nombre nombre" "nav nav nav nav" "titulo titulo titulo titulo" "botones botones botones botones";
+  }
+  header nav {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem 0;
+    gap: 0.8rem;
+  }
+  header div {
+    font-size: 80%;
+    text-align: center;
+  }
+  header section {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0 1rem 1rem;
+  }
+  header section button {
+    font-size: 1rem;
+  }
+  .main-inicio {
+    grid-template-columns: 1fr;
+    gap: 6vw;
+  }
+  .main-inicio section {
+    padding: 6vw;
+  }
+  .main-inicio section h2 {
+    font-size: 170%;
+  }
+  .main-inicio section p, .main-inicio section li {
+    font-size: 115%;
+  }
+  footer {
+    padding: 6vw 4vw;
+    gap: 4vw;
+  }
+  footer section:nth-child(2) button {
+    width: clamp(2.4rem, 10vw, 3rem);
+    height: clamp(2.4rem, 10vw, 3rem);
+  }
+  .carousel-inner {
+    height: min(42vh, 360px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
