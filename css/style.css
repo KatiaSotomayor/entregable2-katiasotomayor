@@ -6,20 +6,21 @@
   font-family: "Baumans";
   color: white;
 }
-* body {
+
+body {
   background-color: rgb(0, 47, 78);
   width: 100%;
 }
-* body img {
+body img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-* body {
+body {
   /*PAGINA INICIO Y OTROS (SERVICIOS, CONTACTO, ETC*/
 }
-* body #inicio,
-* body #otros {
+body #inicio,
+body #otros {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: auto minmax(45vh, 1fr) auto;
@@ -30,8 +31,8 @@
   background-size: cover;
   width: 100%;
 }
-* body #inicio .titulo,
-* body #otros .titulo {
+body #inicio .titulo,
+body #otros .titulo {
   grid-area: titulo;
   justify-self: center;
   padding-top: clamp(2rem, 10vh, 6rem);
@@ -39,13 +40,14 @@
   font-size: 200%;
   text-align: center;
 }
-* body #otros {
+body #otros {
   background-image: url(../img/fondo_otros.webp);
 }
-* body #inicio {
+body #inicio {
   background-image: url(../img/fondo_inicio.webp);
 }
-* body header div, * body header nav {
+body header div,
+body header nav {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -53,10 +55,10 @@
   padding: 1rem;
   font-size: 120%;
 }
-* body header div {
+body header div {
   grid-area: nombre;
 }
-* body header nav {
+body header nav {
   grid-area: nav;
   justify-content: center;
   padding: 0;
@@ -71,20 +73,20 @@
   box-sizing: border-box;
   overflow: visible;
 }
-* body header nav a {
+body header nav a {
   text-decoration: none;
   cursor: pointer;
   color: white;
   white-space: nowrap;
 }
-* body header section {
+body header section {
   grid-area: botones;
   justify-self: center;
   align-self: center;
   display: flex;
   gap: 4vw;
 }
-* body header section button {
+body header section button {
   text-wrap: nowrap;
   font-size: clamp(1rem, 2.2vw, 1.8rem);
   border-style: none;
@@ -94,18 +96,18 @@
   background-color: rgba(0, 47, 78, 0.675);
   transition: all 0.5s ease;
 }
-* body header section button:hover {
+body header section button:hover {
   background-color: rgb(0, 47, 78);
 }
-* body #titulo-excepcion-bootstrap {
+body #titulo-excepcion-bootstrap {
   font-family: "Baumans";
   font-size: 200%;
 }
-* body {
+body {
   /*--------------------------------------*/
   /*MAIN DE INICIO*/
 }
-* body .main-inicio {
+body .main-inicio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
@@ -115,7 +117,7 @@
   background-color: white;
   color: black;
 }
-* body .main-inicio section {
+body .main-inicio section {
   background-color: rgba(0, 47, 78, 0.08);
   border-radius: 1vw;
   padding: 3vw;
@@ -123,21 +125,22 @@
   flex-direction: column;
   gap: 1.5vw;
 }
-* body .main-inicio section h2 {
+body .main-inicio section h2 {
   font-size: 200%;
   color: rgb(0, 47, 78);
 }
-* body .main-inicio section p, * body .main-inicio section li {
+body .main-inicio section p,
+body .main-inicio section li {
   font-size: 120%;
   color: rgb(0, 47, 78);
 }
-* body .main-inicio section ul {
+body .main-inicio section ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.8vw;
 }
-* body .main-inicio section button {
+body .main-inicio section button {
   align-self: center;
   margin-top: 2vw;
   font-size: 130%;
@@ -149,63 +152,66 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
-* body .sobre-mi {
+body .sobre-mi {
   grid-area: sobre-mi;
 }
-* body .estudios {
+body .estudios {
   grid-area: estudios;
 }
-* body .herramientas {
+body .herramientas {
   grid-area: herramientas;
 }
-* body .habilidades {
+body .habilidades {
   grid-area: habilidades;
 }
-* body .main-inicio section button:hover,
-* body footer button:hover {
+body .main-inicio section button:hover,
+body footer button:hover {
   transform: scale(1.1);
 }
-* body .sobre-mi {
+body .sobre-mi {
   background-color: rgba(240, 248, 255, 0);
 }
-* body {
+body {
   /*CARRUSEL*/
 }
-* body .carousel-inner {
+body #carouselExampleIndicators {
+  margin: 2% 0%;
+}
+body .carousel-inner {
   height: min(55vh, 560px);
 }
-* body .carousel-item {
+body .carousel-item {
   height: 100%;
 }
-* body .carousel-item img {
+body .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-* body .carousel-control-prev-icon,
-* body .carousel-control-next-icon {
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon {
   color: rgb(0, 47, 78);
 }
-* body .contacto {
+body .contacto {
   margin: clamp(1.5rem, 4vw, 3rem) auto;
   width: min(92%, 900px);
   font-size: clamp(1rem, 2vw, 1.35rem);
 }
-* body .accordion-body,
-* body .card-text {
+body .accordion-body,
+body .card-text {
   color: rgb(0, 47, 78);
 }
-* body {
+body {
   /*---------------------------------------*/
 }
-* body .container {
+body .container {
   margin-top: 2%;
   margin-bottom: 2%;
 }
-* body {
+body {
   /*---------------------------------------*/
 }
-* body footer {
+body footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 4vw;
@@ -214,43 +220,43 @@
   align-items: center;
   gap: 3vw;
 }
-* body footer section {
+body footer section {
   display: flex;
   flex-direction: column;
   gap: 1vw;
   justify-content: center;
 }
-* body footer section a {
+body footer section a {
   text-decoration: none;
   font-size: 110%;
   cursor: pointer;
   color: white;
 }
-* body footer section #linkedin {
+body footer section #linkedin {
   background-image: url(../img/linkedin.webp);
   background-size: 95%;
   transition: all 0.5s ease;
 }
-* body footer section #fiverr {
+body footer section #fiverr {
   background-image: url(../img/fiverr.webp);
   background-size: 100%;
   transition: all 0.5s ease;
 }
-* body footer section #pinterest {
+body footer section #pinterest {
   background-image: url(../img/pinterest.webp);
   background-size: 100%;
   transition: all 0.5s ease;
 }
-* body footer section:nth-child(1) {
+body footer section:nth-child(1) {
   align-items: flex-start;
   font-size: 110%;
 }
-* body footer section:nth-child(2) {
+body footer section:nth-child(2) {
   flex-direction: row;
   justify-content: center;
   gap: 2vw;
 }
-* body footer section:nth-child(2) button {
+body footer section:nth-child(2) button {
   width: clamp(2.2rem, 3vw, 3rem);
   height: clamp(2.2rem, 3vw, 3rem);
   border-radius: 50%;
@@ -258,7 +264,7 @@
   background-color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
-* body footer section:nth-child(3) {
+body footer section:nth-child(3) {
   align-items: flex-end;
 }
 

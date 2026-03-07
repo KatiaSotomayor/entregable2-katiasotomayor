@@ -11,296 +11,307 @@ $cien-por-ciento: 100%;
     box-sizing: border-box;
     font-family: $fuente-principal;
     color: $color-texto-principal;
+}
 
-    body {
-        background-color: $color-fondo-principal;
+body {
+    background-color: $color-fondo-principal;
+    width: $cien-por-ciento;
+
+    img {
+        max-width: $cien-por-ciento;
+        height: auto;
+        display: block;
+    }
+
+    /*PAGINA INICIO Y OTROS (SERVICIOS, CONTACTO, ETC*/
+    #inicio,
+    #otros {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: auto minmax(45vh, 1fr) auto;
+        grid-template-areas:
+            "nombre nombre nav nav"
+            ". titulo titulo ."
+            ". botones botones .";
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: $cien-por-ciento*1.2;
+        background-size: cover;
         width: $cien-por-ciento;
 
-        img {
-            max-width: $cien-por-ciento;
-            height: auto;
-            display: block;
-        }
-
-        /*PAGINA INICIO Y OTROS (SERVICIOS, CONTACTO, ETC*/
-        #inicio,
-        #otros {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            grid-template-rows: auto minmax(45vh, 1fr) auto;
-            grid-template-areas:
-                "nombre nombre nav nav"
-                ". titulo titulo ."
-                ". botones botones .";
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: $cien-por-ciento*1.2;
-            background-size: cover;
-            width: $cien-por-ciento;
-
-            .titulo{
-                grid-area: titulo;
-                justify-self: center;
-                padding-top: clamp(2rem, 10vh, 6rem);
-                align-self: start;
-                font-size: $cien-por-ciento*2;
-                text-align: center;
-            }
-        }
-
-        #otros {
-            background-image: url(../img/fondo_otros.webp);
-        }
-
-        #inicio {
-            background-image: url(../img/fondo_inicio.webp);
-        }
-
-        header {
-            div,nav {
-                position: sticky;
-                top: 0;
-                z-index: 100;
-                backdrop-filter: blur(5px);
-                padding: 1rem;
-                font-size: $cien-por-ciento*1.2;
-            }
-            div {
-                grid-area: nombre;
-            }
-            nav {
-                grid-area: nav;
-                justify-content: center;
-                padding: 0;
-                justify-self: center;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 3vw;
-                row-gap: 0.6rem;
-                padding-top: 3%;
-
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                overflow: visible;
-                a {
-                    text-decoration: none;
-                    cursor: pointer;
-                    color: $color-texto-principal;
-                    white-space: nowrap;
-                }
-            }
-            section {
-                grid-area: botones;
-                justify-self: center;
-                align-self: center;
-                display: flex;
-                gap: 4vw;
-
-                button {
-                    text-wrap: nowrap;
-                    font-size: clamp(1rem, 2.2vw, 1.8rem);
-                    border-style: none;
-                    padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 1.8rem);
-                    cursor: pointer;
-                    border-radius: 8%;
-                    background-color: rgba(0, 47, 78, 0.675);
-                    transition: all 0.5s ease;
-                }
-
-                button:hover {
-                    background-color: $color-fondo-principal;
-                }
-            }
-        }
-        
-        #titulo-excepcion-bootstrap {
-            font-family: $fuente-principal;
+        .titulo {
+            grid-area: titulo;
+            justify-self: center;
+            padding-top: clamp(2rem, 10vh, 6rem);
+            align-self: start;
             font-size: $cien-por-ciento*2;
+            text-align: center;
+        }
+    }
+
+    #otros {
+        background-image: url(../img/fondo_otros.webp);
+    }
+
+    #inicio {
+        background-image: url(../img/fondo_inicio.webp);
+    }
+
+    header {
+
+        div,
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+            font-size: $cien-por-ciento*1.2;
         }
 
-        /*--------------------------------------*/
-        /*MAIN DE INICIO*/
-        .main-inicio {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas:
-                "sobre-mi sobre-mi sobre-mi estudios"
-                "herramientas herramientas habilidades habilidades";
-            gap: 4vw;
-            padding: clamp(1rem, 4vw, 4rem);
-            background-color: $color-texto-principal;
-            color: black;
-
-            section {
-                background-color: rgba(0, 47, 78, 0.08);
-                border-radius: 1vw;
-                padding: 3vw;
-                display: flex;
-                flex-direction: column;
-                gap: 1.5vw;
-
-                h2 {
-                    font-size: $cien-por-ciento*2;
-                    color: $color-fondo-principal;
-                }
-
-                p,li {
-                    font-size: $cien-por-ciento*1.2;
-                    color: $color-fondo-principal;
-                } 
-
-                ul {
-                    list-style: none;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.8vw;
-                }
-
-                button {
-                    align-self: center;
-                    margin-top: 2vw;
-                    font-size: $cien-por-ciento*1.3;
-                    padding: 0.8vw 2vw;
-                    border-radius: 0.8vw;
-                    border: none;
-                    background-color:$color-fondo-principal;
-                    color: $color-texto-principal;
-                    cursor: pointer;
-                    transition: all 0.5s ease;
-                }
-            }
+        div {
+            grid-area: nombre;
         }
 
-        .sobre-mi {
-            grid-area: sobre-mi;
-        }
-
-        .estudios {
-            grid-area: estudios;
-        }
-
-        .herramientas {
-            grid-area: herramientas;
-        }
-
-        .habilidades {
-            grid-area: habilidades;
-        }
-
-
-        .main-inicio section button:hover,
-        footer button:hover {
-            transform: scale(1.1);
-        }
-
-        .sobre-mi {
-            background-color: rgba(240, 248, 255, 0);
-        }
-
-        /*CARRUSEL*/
-        .carousel-inner {
-            height: min(55vh, 560px);
-        }
-
-        .carousel-item {
-            height: $cien-por-ciento;
-
-            img {
-                width: $cien-por-ciento;
-                height: $cien-por-ciento;
-                object-fit: contain;
-            }
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            color: $color-fondo-principal;
-        }
-
-        .contacto {
-            margin: clamp(1.5rem, 4vw, 3rem) auto;
-            width: min(92%, 900px);
-            font-size: clamp(1rem, 2vw, 1.35rem);
-        }
-
-        .accordion-body,
-        .card-text {
-            color: $color-fondo-principal;
-        }
-
-        /*---------------------------------------*/
-        .container {
-            margin-top: 2%;
-            margin-bottom: 2%;
-        }
-
-        /*---------------------------------------*/
-        footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            padding: 4vw;
-            background-color: rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(6px);
-            align-items: center;
+        nav {
+            grid-area: nav;
+            justify-content: center;
+            padding: 0;
+            justify-self: center;
+            display: flex;
+            flex-wrap: wrap;
             gap: 3vw;
+            row-gap: 0.6rem;
+            padding-top: 3%;
 
-            section {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow: visible;
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                color: $color-texto-principal;
+                white-space: nowrap;
+            }
+        }
+
+        section {
+            grid-area: botones;
+            justify-self: center;
+            align-self: center;
+            display: flex;
+            gap: 4vw;
+
+            button {
+                text-wrap: nowrap;
+                font-size: clamp(1rem, 2.2vw, 1.8rem);
+                border-style: none;
+                padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 1.8rem);
+                cursor: pointer;
+                border-radius: 8%;
+                background-color: rgba(0, 47, 78, 0.675);
+                transition: all 0.5s ease;
+            }
+
+            button:hover {
+                background-color: $color-fondo-principal;
+            }
+        }
+    }
+
+    #titulo-excepcion-bootstrap {
+        font-family: $fuente-principal;
+        font-size: $cien-por-ciento*2;
+    }
+
+    /*--------------------------------------*/
+    /*MAIN DE INICIO*/
+    .main-inicio {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "sobre-mi sobre-mi sobre-mi estudios"
+            "herramientas herramientas habilidades habilidades";
+        gap: 4vw;
+        padding: clamp(1rem, 4vw, 4rem);
+        background-color: $color-texto-principal;
+        color: black;
+
+        section {
+            background-color: rgba(0, 47, 78, 0.08);
+            border-radius: 1vw;
+            padding: 3vw;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vw;
+
+            h2 {
+                font-size: $cien-por-ciento*2;
+                color: $color-fondo-principal;
+            }
+
+            p,
+            li {
+                font-size: $cien-por-ciento*1.2;
+                color: $color-fondo-principal;
+            }
+
+            ul {
+                list-style: none;
                 display: flex;
                 flex-direction: column;
-                gap: 1vw;
-                justify-content: center;
-
-                a {
-                    text-decoration: none;
-                    font-size: $cien-por-ciento*1.1;
-                    cursor: pointer;
-                    color: $color-texto-principal;
-                }
-
-                #linkedin {
-                    background-image: url(../img/linkedin.webp);
-                    background-size: 95%;
-                    transition: all 0.5s ease;
-                }
-
-                #fiverr {
-                    background-image: url(../img/fiverr.webp);
-                    background-size: $cien-por-ciento;
-                    transition: all 0.5s ease;
-                }
-
-                #pinterest {
-                    background-image: url(../img/pinterest.webp);
-                    background-size: $cien-por-ciento;
-                    transition: all 0.5s ease;
-                }
+                gap: 0.8vw;
             }
 
-            section:nth-child(1) {
-                align-items: flex-start;
+            button {
+                align-self: center;
+                margin-top: 2vw;
+                font-size: $cien-por-ciento*1.3;
+                padding: 0.8vw 2vw;
+                border-radius: 0.8vw;
+                border: none;
+                background-color: $color-fondo-principal;
+                color: $color-texto-principal;
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+
+    .sobre-mi {
+        grid-area: sobre-mi;
+    }
+
+    .estudios {
+        grid-area: estudios;
+    }
+
+    .herramientas {
+        grid-area: herramientas;
+    }
+
+    .habilidades {
+        grid-area: habilidades;
+    }
+
+
+    .main-inicio section button:hover,
+    footer button:hover {
+        transform: scale(1.1);
+    }
+
+    .sobre-mi {
+        background-color: rgba(240, 248, 255, 0);
+    }
+
+    /*CARRUSEL*/
+    #carouselExampleIndicators {
+        margin: 2% 0%;
+    }
+
+    .carousel-inner {
+        height: min(55vh, 560px);
+    }
+
+    .carousel-item {
+        height: $cien-por-ciento;
+
+        img {
+            width: $cien-por-ciento;
+            height: $cien-por-ciento;
+            object-fit: contain;
+        }
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        color: $color-fondo-principal;
+    }
+
+    .contacto {
+        margin: clamp(1.5rem, 4vw, 3rem) auto;
+        width: min(92%, 900px);
+        font-size: clamp(1rem, 2vw, 1.35rem);
+    }
+
+    .accordion-body,
+    .card-text {
+        color: $color-fondo-principal;
+    }
+
+    /*---------------------------------------*/
+    .container {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    /*---------------------------------------*/
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 4vw;
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(6px);
+        align-items: center;
+        gap: 3vw;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
                 font-size: $cien-por-ciento*1.1;
+                cursor: pointer;
+                color: $color-texto-principal;
             }
 
-            section:nth-child(2) {
-                flex-direction: row;
-                justify-content: center;
-                gap: 2vw;
-
-                button {
-                    width: clamp(2.2rem, 3vw, 3rem);
-                    height: clamp(2.2rem, 3vw, 3rem);
-                    border-radius: 50%;
-                    border: none;
-                    background-color: rgba(255, 255, 255, 0.4);
-                    cursor: pointer;
-                }
+            #linkedin {
+                background-image: url(../img/linkedin.webp);
+                background-size: 95%;
+                transition: all 0.5s ease;
             }
 
-            section:nth-child(3) {
-                align-items: flex-end;
+            #fiverr {
+                background-image: url(../img/fiverr.webp);
+                background-size: $cien-por-ciento;
+                transition: all 0.5s ease;
             }
+
+            #pinterest {
+                background-image: url(../img/pinterest.webp);
+                background-size: $cien-por-ciento;
+                transition: all 0.5s ease;
+            }
+        }
+
+        section:nth-child(1) {
+            align-items: flex-start;
+            font-size: $cien-por-ciento*1.1;
+        }
+
+        section:nth-child(2) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 2vw;
+
+            button {
+                width: clamp(2.2rem, 3vw, 3rem);
+                height: clamp(2.2rem, 3vw, 3rem);
+                border-radius: 50%;
+                border: none;
+                background-color: rgba(255, 255, 255, 0.4);
+                cursor: pointer;
+            }
+        }
+
+        section:nth-child(3) {
+            align-items: flex-end;
         }
     }
 }
