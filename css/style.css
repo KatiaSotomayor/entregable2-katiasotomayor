@@ -112,9 +112,9 @@ header section button:hover {
 
 .main-inicio {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: "sobre-mi sobre-mi sobre-mi estudios" "herramientas herramientas habilidades habilidades";
+  grid-template-areas: "sobre-mi sobre-mi sobre-mi sobre-mi estudios estudios" "herramientas herramientas herramientas habilidades habilidades habilidades";
   gap: 4vw;
   padding: clamp(1rem, 4vw, 4rem);
   background-color: white;
@@ -132,7 +132,8 @@ header section button:hover {
   font-size: 200%;
   color: rgb(0, 47, 78);
 }
-.main-inicio section p, .main-inicio section li {
+.main-inicio section p,
+.main-inicio section li {
   font-size: 120%;
   color: rgb(0, 47, 78);
 }
@@ -166,6 +167,20 @@ header section button:hover {
 }
 .main-inicio .habilidades {
   grid-area: habilidades;
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+}
+.main-inicio .habilidades div {
+  max-width: 20vw;
+}
+.main-inicio .habilidades div h2 {
+  padding-bottom: 10%;
+}
+.main-inicio .habilidades img {
+  max-height: 60vh;
+  max-width: 20vw;
+  border-radius: 10%;
 }
 
 .main-inicio section button:hover,
