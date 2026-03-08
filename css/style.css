@@ -48,11 +48,11 @@ body img {
 }
 
 #otros {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 8, 25, 0.885)), url(../../img/fondo_otros.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 8, 25, 0.885)), url(../../img/fondo_otros.webp);
 }
 
 #inicio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 16, 49, 0.81)), url(../../img/fondo_inicio.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 16, 49, 0.81)), url(../../img/fondo_inicio.webp);
 }
 
 header div, header nav {
@@ -411,18 +411,18 @@ footer section p {
   font-size: 80%;
   margin-right: 2vw;
 }
-footer section #linkedin {
-  background-image: url(../../img/footer_backgounds_images/linkedin.webp);
-  background-size: 95%;
-  transition: all 0.5s ease;
-}
-footer section #fiverr {
-  background-image: url(../img/fiverr.webp);
+footer #linkedin {
+  background-image: url(../../img/linkedin.webp);
   background-size: 100%;
   transition: all 0.5s ease;
 }
-footer section #pinterest {
-  background-image: url(../img/pinterest.webp);
+footer #fiverr {
+  background-image: url(../../img/fiverr.webp);
+  background-size: 100%;
+  transition: all 0.5s ease;
+}
+footer #pinterest {
+  background-image: url(../../img/pinterest.webp);
   background-size: 100%;
   transition: all 0.5s ease;
 }
