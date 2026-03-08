@@ -412,7 +412,7 @@ footer section p {
   margin-right: 2vw;
 }
 footer section #linkedin {
-  background-image: url(../img/linkedin.webp);
+  background-image: url(../../img/footer_backgounds_images/linkedin.webp);
   background-size: 95%;
   transition: all 0.5s ease;
 }
