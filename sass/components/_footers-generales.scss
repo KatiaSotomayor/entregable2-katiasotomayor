@@ -1,0 +1,67 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4vw;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    gap: 3vw;
+
+    section {
+        @include flex(column, 1vw);
+        display: flex;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            font-size: $cien-por-ciento*1.1;
+            cursor: pointer;
+            color: $color-texto-principal;
+        }
+        p {
+            text-align: left;
+            
+        }
+
+        #linkedin {
+            background-image: url(../../img/linkedin.webp);
+            background-size: 95%;
+            @include transicion;
+        }
+
+        #fiverr {
+            background-image: url(../../img/fiverr.webp);
+            background-size: $cien-por-ciento;
+            @include transicion;
+        }
+
+        #pinterest {
+            background-image: url(../../img/pinterest.webp);
+            background-size: $cien-por-ciento;
+            @include transicion;
+        }
+    }
+
+    section:nth-child(1) {
+        align-items: flex-start;
+        font-size: $cien-por-ciento*1.1;
+    }
+
+    section:nth-child(2) {
+        @include flex(row, 2vw);
+
+        button {
+            width: clamp(2.2rem, 3vw, 3rem);
+            height: clamp(2.2rem, 3vw, 3rem);
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            @include boton-base;
+        }
+    }
+
+    section:nth-child(3) {
+        align-items: flex-end;
+    }
+}

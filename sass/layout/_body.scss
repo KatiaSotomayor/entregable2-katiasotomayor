@@ -1,0 +1,13 @@
+@use '../utilities/variables' as *;
+
+body {
+    background-color: $color-fondo-principal;
+    width: $cien-por-ciento;
+
+    img {
+        max-width: $cien-por-ciento;
+        height: auto;
+        display: block;
+    }
+
+}

@@ -1,0 +1,105 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+#inicio, #otros {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto minmax(45vh, 1fr) auto;
+    grid-template-areas:
+        "nombre nombre nav nav"
+        ". titulo titulo ."
+        ". botones botones .";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $cien-por-ciento*1.2;
+    background-size: cover;
+    width: $cien-por-ciento;
+
+    .titulo {
+        grid-area: titulo;
+        justify-self: center;
+        padding-top: clamp(2rem, 10vh, 6rem);
+        align-self: start;
+        font-size: $cien-por-ciento*2;
+        text-align: center;
+    }
+}
+
+#otros {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 8, 25, 0.885)), url(../../img/fondo_otros.webp);
+}
+
+#inicio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 16, 49, 0.81)), url(../../img/fondo_inicio.webp);
+}
+
+header {
+
+    div, nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+        padding: 1rem;
+        font-size: $cien-por-ciento*1.2;
+    }
+
+    div {
+        grid-area: nombre;
+        p, h1 {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+
+    nav {
+        grid-area: nav;
+        justify-content: center;
+        padding: 0;
+        justify-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3vw;
+        row-gap: 0.6rem;
+        padding-top: 3%;
+
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: $color-texto-principal;
+            white-space: nowrap;
+        }
+    }
+
+    section {
+        grid-area: botones;
+        justify-self: center;
+        align-self: center;
+        @include flex(row, 4vw);
+        display: flex;
+
+        #titulo-excepcion-bootstrap {
+            font-family: $fuente-principal;
+            font-size: $cien-por-ciento*2;
+        }
+
+        button {
+            text-wrap: nowrap;
+            font-size: clamp(1rem, 2.2vw, 1.8rem);
+            padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 1.8rem);
+            margin: 5% 0%;
+            border-radius: 8%;
+            background-color: rgba(29, 108, 161, 0.675);
+            @include transicion;
+            @include boton-base;
+        }
+
+        button:hover {
+            background-color: $color-fondo-principal;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+   .main-inicio {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "sobre-mi sobre-mi sobre-mi estudios"
+            "herramientas herramientas habilidades habilidades";
+        gap: 4vw;
+        padding: clamp(1rem, 4vw, 4rem);
+        background-color: $color-texto-principal;
+        color: black;
+
+        section {
+            background-color: rgba(0, 47, 78, 0.08);
+            border-radius: 1vw;
+            padding: 3vw;
+            @include flex(column, 1.5vw);
+            display: flex;
+
+            h2 {
+                font-size: $cien-por-ciento*2;
+                color: $color-fondo-principal;
+            }
+
+            p, li {
+                font-size: $cien-por-ciento*1.2;
+                color: $color-fondo-principal;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8vw;
+            }
+
+            button {
+                align-self: center;
+                margin-top: 2vw;
+                font-size: $cien-por-ciento*1.3;
+                padding: 0.8vw 2vw;
+                border-radius: 0.8vw;
+                background-color: $color-fondo-principal;
+                color: $color-texto-principal;
+                @include transicion;
+                @include boton-base;
+            }
+        }
+
+        .sobre-mi {
+            grid-area: sobre-mi;
+            background-color: rgba(240, 248, 255, 0);
+        }
+        
+        .estudios {
+            grid-area: estudios;
+        }
+        
+        .herramientas {
+            grid-area: herramientas;
+        }
+        
+        .habilidades {
+            grid-area: habilidades;
+        }
+    }
+
+
+    .main-inicio section button:hover,
+    footer button:hover {
+        transform: scale(1.1);
+    }
+
+

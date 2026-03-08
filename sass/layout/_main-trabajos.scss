@@ -1,0 +1,71 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+/*BANNER WEBS DESPLAZANDOSE*/
+
+.main-trabajos {
+    #imagen-cinta-video {
+        z-index: 0;
+        position: absolute;
+    }
+
+    .banner-imagenes {
+        overflow: hidden;
+        position: relative;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        padding-top: 2%;
+
+        img {
+            width: 10%;
+            margin: 0px 1%;
+
+        }
+    }
+
+    .deslizamiento-div {
+        display: flex;
+        animation: 10s deslizamiento infinite linear;
+    }
+
+    .deslizamiento-div::before {
+        left: 0;
+    }
+
+    .deslizamiento-div:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes deslizamiento {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-96%);
+        }
+    }
+}
+
+
+/*main class del servicios*/
+.accordion-body,
+.card-text {
+    color: $color-fondo-principal;
+}
+
+.container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    .btn-primary {
+        background-color: $color-fondo-principal;
+        @include boton-base;
+    }
+}
+
+/*main class contacto*/
+.contacto {
+    margin: clamp(1.5rem, 4vw, 3rem) auto;
+    width: min(92%, 900px);
+    font-size: clamp(1rem, 2vw, 1.35rem);
+}
