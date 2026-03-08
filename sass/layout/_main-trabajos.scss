@@ -60,6 +60,11 @@
     .btn-primary {
         background-color: $color-fondo-principal;
         @include boton-base;
+        @include transicion;
+    }
+
+    .btn-primary:hover {
+        background-color: rgb(49, 134, 177);
     }
 }
 

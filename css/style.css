@@ -19,6 +19,14 @@ body img {
   display: block;
 }
 
+.btn-inicio, header section #contactar, header section #descargar_cv {
+  text-wrap: nowrap;
+  font-size: clamp(1rem, 2.2vw, 1.8rem);
+  padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 1.8rem);
+  margin: 5% 0%;
+  border-radius: 8%;
+}
+
 #inicio, #otros {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -40,11 +48,11 @@ body img {
 }
 
 #otros {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 8, 25, 0.885)), url(../../img/fondo_otros.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 8, 25, 0.885)), url(../img/fondo_otros.webp);
 }
 
 #inicio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 16, 49, 0.81)), url(../../img/fondo_inicio.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 16, 49, 0.81)), url(../img/fondo_inicio.webp);
 }
 
 header div, header nav {
@@ -63,6 +71,7 @@ header div p, header div h1 {
   padding: 0px;
 }
 header nav {
+  position: sticky;
   grid-area: nav;
   justify-content: center;
   padding: 0;
@@ -95,18 +104,19 @@ header section #titulo-excepcion-bootstrap {
   font-family: "Baumans";
   font-size: 200%;
 }
-header section button {
-  text-wrap: nowrap;
-  font-size: clamp(1rem, 2.2vw, 1.8rem);
-  padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 2vw, 1.8rem);
-  margin: 5% 0%;
-  border-radius: 8%;
-  background-color: rgba(29, 108, 161, 0.675);
+header section #contactar {
+  background-color: rgba(52, 154, 188, 0.675);
   transition: all 0.5s ease;
   border: none;
   cursor: pointer;
 }
-header section button:hover {
+header section #descargar_cv {
+  background-color: rgba(35, 102, 184, 0.675);
+  transition: all 0.5s ease;
+  border: none;
+  cursor: pointer;
+}
+header section #contactar:hover, header section #descargar_cv:hover {
   background-color: rgb(0, 47, 78);
 }
 
@@ -237,6 +247,10 @@ footer button:hover {
   background-color: rgb(0, 47, 78);
   border: none;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+.container .btn-primary:hover {
+  background-color: rgb(49, 134, 177);
 }
 
 /*main class contacto*/
@@ -272,6 +286,26 @@ footer button:hover {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "sobre-mi" "estudios" "herramientas" "habilidades";
     text-align: center;
+  }
+  .main-inicio section img {
+    min-width: 50vw;
+  }
+  .main-trabajos #imagen-cinta-video {
+    opacity: 0;
+  }
+  .main-trabajos .banner-imagenes img {
+    width: 30%;
+  }
+  @keyframes deslizamiento {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-256%);
+    }
+  }
+  .contacto .accordion-item .accordion-body {
+    font-size: 150%;
   }
   footer {
     grid-template-columns: 1fr;
@@ -315,13 +349,32 @@ footer button:hover {
     gap: 6vw;
   }
   .main-inicio section {
-    padding: 6vw;
+    padding: 6vw 1.3vw 6vw 6vw;
   }
   .main-inicio section h2 {
     font-size: 170%;
   }
   .main-inicio section p, .main-inicio section li {
     font-size: 115%;
+  }
+  .main-inicio section img {
+    min-height: 40vh;
+    min-width: 40vw;
+    border-radius: 5%;
+  }
+  .main-trabajos #imagen-cinta-video {
+    opacity: 0;
+  }
+  .main-trabajos .banner-imagenes img {
+    width: 40%;
+  }
+  @keyframes deslizamiento {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-336%);
+    }
   }
   footer {
     padding: 6vw 4vw;
@@ -330,9 +383,6 @@ footer button:hover {
   footer section:nth-child(2) button {
     width: clamp(2.4rem, 10vw, 3rem);
     height: clamp(2.4rem, 10vw, 3rem);
-  }
-  .carousel-inner {
-    height: min(42vh, 360px);
   }
 }
 footer {
@@ -352,25 +402,27 @@ footer section {
 }
 footer section a {
   text-decoration: none;
-  font-size: 110%;
+  font-size: 80%;
   cursor: pointer;
   color: white;
 }
 footer section p {
   text-align: left;
+  font-size: 80%;
+  margin-right: 2vw;
 }
 footer section #linkedin {
-  background-image: url(../../img/linkedin.webp);
+  background-image: url(../img/linkedin.webp);
   background-size: 95%;
   transition: all 0.5s ease;
 }
 footer section #fiverr {
-  background-image: url(../../img/fiverr.webp);
+  background-image: url(../img/fiverr.webp);
   background-size: 100%;
   transition: all 0.5s ease;
 }
 footer section #pinterest {
-  background-image: url(../../img/pinterest.webp);
+  background-image: url(../img/pinterest.webp);
   background-size: 100%;
   transition: all 0.5s ease;
 }

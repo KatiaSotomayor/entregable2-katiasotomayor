@@ -16,29 +16,30 @@ footer {
 
         a {
             text-decoration: none;
-            font-size: $cien-por-ciento*1.1;
+            font-size: $cien-por-ciento*0.8;
             cursor: pointer;
             color: $color-texto-principal;
         }
         p {
             text-align: left;
-            
+            font-size: $cien-por-ciento*0.8;
+            margin-right: 2vw;
         }
 
         #linkedin {
-            background-image: url(../../img/linkedin.webp);
-            background-size: 95%;
+            background-image: url(../img/linkedin.webp);
+            background-size: $cien-por-ciento*0.95;
             @include transicion;
         }
 
         #fiverr {
-            background-image: url(../../img/fiverr.webp);
+            background-image: url(../img/fiverr.webp);
             background-size: $cien-por-ciento;
             @include transicion;
         }
 
         #pinterest {
-            background-image: url(../../img/pinterest.webp);
+            background-image: url(../img/pinterest.webp);
             background-size: $cien-por-ciento;
             @include transicion;
         }

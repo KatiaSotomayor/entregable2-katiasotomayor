@@ -43,7 +43,48 @@
             "herramientas"
             "habilidades";
         text-align: center;
+
+        section {
+            img{
+                min-width: 50vw;
+            }
+        }
     }
+
+
+    .main-trabajos {
+        #imagen-cinta-video {
+            opacity: 0;
+        }
+
+        .banner-imagenes {
+            img {
+                width: 30%;
+
+            }
+        }
+
+        @keyframes deslizamiento {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-256%);
+            }
+        }
+    }
+
+    .contacto {
+        .accordion-item {
+            .accordion-body {
+                font-size: $cien-por-ciento*1.5;
+            }
+            
+        }
+    }
+
+
 
     footer {
         grid-template-columns: 1fr;
@@ -98,12 +139,39 @@
         grid-template-columns: 1fr;
         gap: 6vw;
         section {
-            padding: 6vw;
+            padding: 6vw 1.3vw 6vw 6vw;
             h2 {
                 font-size: $cien-por-ciento*1.7;
             }
             p,li {
                 font-size: $cien-por-ciento*1.15;
+            }
+            img{
+                min-height: 40vh;
+                min-width: 40vw;
+                border-radius: 5%;
+            }
+        }
+    }
+
+    .main-trabajos {
+        #imagen-cinta-video {
+            opacity: 0;
+        }
+
+        .banner-imagenes {
+            img {
+                width: 40%;
+            }
+        }
+
+        @keyframes deslizamiento {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-336%);
             }
         }
     }
@@ -117,7 +185,4 @@
         }
     }
 
-    .carousel-inner {
-        height: min(42vh, 360px);
-    }
 }
