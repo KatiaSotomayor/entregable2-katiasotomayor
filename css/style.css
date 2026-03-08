@@ -180,7 +180,7 @@ header section button:hover {
 .main-inicio .habilidades img {
   max-height: 60vh;
   max-width: 20vw;
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 .main-inicio section button:hover,
